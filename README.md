@@ -1,16 +1,55 @@
-# React + Vite
+# 🍽️ Restaurant Menu App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web app for restaurants to display their menu publicly and manage it privately.
 
-Currently, two official plugins are available:
+**Live demo:** [menu-app-umber-ten.vercel.app](https://menu-app-umber-ten.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Public menu organized by category: Starters, Mains, Specials, and Drinks
+- Each dish shows a photo, description, and price
+- Sold-out items are visually crossed out in real time
+- Private admin panel to add, edit, delete dishes and upload photos
+- Secure login for restaurant owners
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+|                 |                          |
+| --------------- | ------------------------ |
+| React + Vite    | Frontend                 |
+| Tailwind CSS    | Styling                  |
+| React Router v6 | Navigation               |
+| Supabase        | Database, auth & storage |
+| Vercel          | Hosting                  |
+
+> Total cost: **$0/month**
+
+---
+
+## Local Setup
+
+```bash
+git clone https://github.com/LizandroV/MenuAPP.git
+cd MenuAPP
+npm install
+npm run dev
+```
+
+Create a `.env.local` file in the root:
+
+```env
+VITE_SUPABASE_URL=your-supabase-url
+VITE_SUPABASE_ANON_KEY=your-anon-key
+```
+
+Get these values from your Supabase project → **Settings → API**.
+
+---
+
+## License
+
+Private project — all rights reserved.
