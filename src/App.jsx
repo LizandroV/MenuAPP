@@ -3,6 +3,7 @@ import { AuthProvider } from "./lib/AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
 import MenuPage from "./pages/MenuPage";
 import LoginPage from "./pages/LoginPage";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             path="/admin"
             element={
               <PrivateRoute>
-                <div className="p-8 text-xl">⚙️ Admin — próximamente</div>
+                <AdminPage />
               </PrivateRoute>
             }
           />
