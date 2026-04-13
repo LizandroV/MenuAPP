@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import AdminCard from "../components/AdminCard";
 import DishModal from "../components/DishModal";
+import ConfigModal from "../components/ConfigModal";
 
 const CATS = ["TODOS", "ENTRADA", "MENU", "ESPECIALES", "REFRESCO"];
 
@@ -12,6 +13,7 @@ function AdminPage() {
   const [loading, setLoading] = useState(true);
   const [cat, setCat] = useState("TODOS");
   const [modalOpen, setModalOpen] = useState(false);
+  const [configOpen, setConfigOpen] = useState(false);
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
@@ -73,6 +75,13 @@ function AdminPage() {
               <p className="text-xs text-gray-400">{items.length} platos</p>
             </div>
             <div className="flex gap-2">
+              <button
+                onClick={() => setConfigOpen(true)}
+                className="px-3 py-2 text-xs rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50"
+              >
+                Configuracion
+              </button>
+
               <a
                 href="/"
                 target="_blank"
@@ -145,6 +154,8 @@ function AdminPage() {
           onSaved={fetchItems}
         />
       )}
+
+      {configOpen && <ConfigModal onClose={() => setConfigOpen(false)} />}
     </div>
   );
 }
