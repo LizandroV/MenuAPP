@@ -94,7 +94,7 @@ function MenuPage() {
         ) : disponibles.length === 0 ? (
           <div className="text-center text-gray-400 py-20">
             <p className="text-4xl mb-4">:)</p>
-            <p>No hay platos disponibles en esta categoria</p>
+            <p>No hay platos disponibles en esta categoría</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -104,11 +104,6 @@ function MenuPage() {
           </div>
         )}
       </div>
-
-      <div className="text-center text-gray-400 text-xs py-4">
-        Los precios incluyen impuestos
-      </div>
-
       {config && (
         <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-100 z-20">
           <div className="max-w-4xl mx-auto">
