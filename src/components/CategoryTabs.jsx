@@ -1,9 +1,9 @@
 const CATEGORIAS = ["TODOS", "ENTRADA", "MENU", "ESPECIALES", "REFRESCO"];
 
 const LABELS = {
-  TODOS: "Todos",
+  TODOS: "Menú del dia",
   ENTRADA: "Entradas",
-  MENU: "Menú",
+  MENU: "Segundos",
   ESPECIALES: "Especiales",
   REFRESCO: "Refrescos",
 };
